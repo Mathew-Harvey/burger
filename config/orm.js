@@ -26,7 +26,7 @@ function objToSql(ob) {
       // translate array of strings to a single comma-separated string
       return arr.toString();
     }
-    
+
 var orm = {
   selectAll: function (table, cb) {
     var dbQuery = "SELECT * FROM " + table + ";";
@@ -38,7 +38,7 @@ var orm = {
       cb(res);
     });
   },
-  insertOne: function (table, cols, vals, cb) {
+  create: function (table, cols, vals, cb) {
     var dbQuery = "INSERT INTO" +
       table +
       " (" +
@@ -56,7 +56,7 @@ var orm = {
       cb(res);
     });
   },
-  updateOne: function (table, objColVals, condition, cb) {
+  update: function (table, objColVals, condition, cb) {
     var dbQuery =
       "UPDATE " +
       table +
@@ -73,7 +73,7 @@ var orm = {
       cb(res);
     });
   },
-  deleteOne: function (table, condition, cb) {
+  delete: function (table, condition, cb) {
     var dbQuery = "DELETE FROM " + table + " WHERE " + condition;
 
     console.log(dbQuery);
