@@ -1,5 +1,5 @@
 // Set up MySQL connection.
-var mysql = require("mysql");
+// var mysql = require("mysql");
 
 // mysql://b382e8e4ca5ca4:f1cf2351@us-cdbr-east-02.cleardb.com/heroku_201d79e0878fddf?reconnect=true
 
