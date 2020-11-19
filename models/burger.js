@@ -17,10 +17,11 @@ var burger = {
       cb(res);
     });
   },
-  delete: function (objColVals, condition, cb) {
-    orm.update("burgers", condition, condition, function (res) {
+ // Delete a burger from the db.
+ deleteOne: function(condition, cb) {
+  orm.deleteOne("burgers", condition, function(res) {
       cb(res);
-    });
+  });
   }
 };
 module.exports = burger

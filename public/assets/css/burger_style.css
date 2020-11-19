@@ -1,6 +1,6 @@
 
 .jumbotron {
-    /* background-image: url("/assets/img/background.jpg"); */
+    background-image: url("../img/burger.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

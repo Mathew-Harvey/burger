@@ -28,19 +28,16 @@ $(function () {
 
         });
     });
-    $(".deleteburger").on("click", function (event) {
+    $(".trashburger").on("click", function(event) {
         event.preventDefault();
-        var id = $(this).data("id");
-        devouredState = {
-            devoured: 1
-        };
-        $.ajax("/api/burgers/" + id, {
-            type: "DELETE",
-            data: devouredState
-        }).then(function () {
-            console.log("Burger deleted");
-            location.reload();
 
-        });
-    });    
+        var id = $(this).data("id");
+
+        // Send the DELETE request.
+        $.ajax({
+            type: "DELETE",
+            url: "/api/burgers/" + id
+        }).then(location.reload());
+    });
+
 });

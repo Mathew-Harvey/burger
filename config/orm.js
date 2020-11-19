@@ -76,15 +76,19 @@ var orm = {
       cb(res);
     });
   },
-  delete: function (table, condition, cb) {
-    var dbQuery = "DELETE FROM " + table + " WHERE " + condition;
+  // Delete a burger from the db.
+  deleteOne: function(table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
 
-    console.log(dbQuery);
-    connection.query(dbQuery, function (err, res) {
-      if (err) {
-        throw err;
-      }
-      cb(res);
+    console.log(queryString);
+
+    connection.query(queryString, function(err, result) {
+        if (err) {
+            throw err
+        }
+        cb(result);
     });
   }
 };
