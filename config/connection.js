@@ -3,7 +3,7 @@
 
 // mysql://b382e8e4ca5ca4:f1cf2351@us-cdbr-east-02.cleardb.com/heroku_201d79e0878fddf?reconnect=true
 
-var connection = mysql.createConnection({
+var connection = createConnection({
   host: "us-cdbr-east-02.cleardb.com",
   port: 3306,
   user: "b382e8e4ca5ca4",
