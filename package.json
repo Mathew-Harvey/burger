@@ -1,24 +1,24 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "Really just a to-do list app",
+  "engines": {
+    "node": "12.11.1"
+  },
+  "description": "![GitHub followers](https://img.shields.io/github/followers/mathew-harvey?style=social)",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "mysql": "^2.18.1"
+    "serve": "^11.3.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mathew-Harvey/burger.git"
   },
-  "author": "Mathew Harvey",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mathew-Harvey/burger/issues"
   },
