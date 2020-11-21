@@ -49,13 +49,11 @@ var orm = {
       printQuestionMarks(vals.length) +
       ") ";
 
-    console.log(dbQuery);
     connection.query(dbQuery, vals, function (err, res) {
       if (err) {
         throw err;
       }
       cb(res);
-      console.log
     });
   },
   update: function (table, objColVals, condition, cb) {
@@ -68,7 +66,6 @@ var orm = {
       "WHERE " +
       condition;
 
-    console.log(dbQuery);
     connection.query(dbQuery, objColVals, function (err, res) {
       if (err) {
         throw err;
@@ -82,7 +79,6 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log(queryString);
 
     connection.query(queryString, function(err, result) {
         if (err) {
